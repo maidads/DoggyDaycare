@@ -13,6 +13,7 @@ function CatalogPage() {
   return (
     <div className="catalog-container">
       <h1>Dog Catalog</h1>
+      <p>Click on a dog to get more information about them!</p>
       <div className="dog-grid">
         {dogs.map((dog) => (
           <div key={dog.id} className="dog-card">
