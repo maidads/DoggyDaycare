@@ -1,12 +1,26 @@
 import React from 'react';
-import './App.css';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import WelcomePage from './WelcomePage';
+import CatalogPage from './CatalogPage';
+import AboutDogs from './AboutDogs';
+import './App.css';
 
 function App() {
   return (
-    <div>
-      <WelcomePage />
-    </div>
+    <Router>
+      <nav>
+        <ul>
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/catalog">Catalog</Link></li>
+          <li><Link to="/aboutdogs">About Dogs</Link></li>
+        </ul>
+      </nav>
+      <Routes>
+        <Route path="/" element={<WelcomePage />} />
+        <Route path="/catalog" element={<CatalogPage />} />
+        <Route path="/aboutdogs" element={<AboutDogs />} />
+      </Routes>
+    </Router>
   );
 }
 
