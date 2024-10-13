@@ -1,13 +1,15 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import WelcomePage from './components/WelcomePage';
-import CatalogPage from './components/CatalogPage';
-import AboutDogs from './components/AboutDogs';
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import './App.css';
+import AboutDogs from './components/AboutDogs';
+import CatalogPage from './components/CatalogPage';
+import Navbar from './components/Navbar';
+import WelcomePage from './components/WelcomePage';
 
 function App() {
   return (
     <Router>
+      <Navbar />
       <Routes>
         <Route path="/" element={<WelcomePage />} />
         <Route path="/catalog" element={<CatalogPage />} />
