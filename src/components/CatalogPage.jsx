@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './CatalogPage.css';
 
-function CatalogPage() {
+function CatalogPage(){
   const [dogs, setDogs] = useState([]);
 
   useEffect(() => {
@@ -14,7 +14,7 @@ function CatalogPage() {
   return (
     <div className="catalog-container">
       <h1>Dog Catalog</h1>
-      <p>Click on a dog to get more information about them.</p>
+      <p>Click on a dog to get more information about them!</p>
       <div className="dog-grid">
         {dogs.map((dog) => (
           <Link key={dog.chipNumber} to={`/dogs/${dog.chipNumber}`} className="dog-card">
