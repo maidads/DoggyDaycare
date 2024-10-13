@@ -1,9 +1,9 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
-import WelcomePage from './WelcomePage';
-import CatalogPage from './CatalogPage';
-import AboutDogs from './AboutDogs';
+import { Link, Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import './App.css';
+import AboutDogs from './components/AboutDogs';
+import CatalogPage from './components/CatalogPage';
+import WelcomePage from './components/WelcomePage';
 
 function App() {
   return (
